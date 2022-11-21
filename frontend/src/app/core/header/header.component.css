@@ -1,0 +1,54 @@
+/* Navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px 16px 32px;
+  background-color: #fde6ba;
+  color: white;
+}
+
+.brand img {
+  width: 13rem;
+}
+
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #644d3f;
+  margin: 1rem;
+  font-size: 20px;
+  display: block;
+}
+
+/* Navigation links animation */
+.nav-links a {
+    display: inline-block;
+    padding-bottom: 0.25rem; 
+    position: relative;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ee4c32;
+  transition: width 0.25s ease-out;
+}
+
+a:hover::before {
+  width: 100%;
+  left: 0;
+}
