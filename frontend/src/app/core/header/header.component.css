@@ -32,12 +32,12 @@
 
 /* Navigation links animation */
 .nav-links a {
-    display: inline-block;
-    padding-bottom: 0.25rem; 
-    position: relative;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  position: relative;
 }
 
-a::before {
+a:not(#img-brand)::before {
   content: "";
   position: absolute;
   right: 0;
@@ -48,7 +48,37 @@ a::before {
   transition: width 0.25s ease-out;
 }
 
-a:hover::before {
+a:not(#img-brand):hover::before {
   width: 100%;
   left: 0;
 }
+
+/* Welcome image and text */
+.img-wrap img {
+  width: 100%;
+  height: 600px;
+  filter: brightness(50%);
+}
+
+.img-wrap {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+.welcome-header {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ee4c32;
+}
+
+.centered {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
