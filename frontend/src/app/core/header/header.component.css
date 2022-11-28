@@ -5,7 +5,6 @@
   justify-content: space-between;
   padding: 16px 32px 16px 32px;
   background-color: #fde6ba;
-  color: white;
 }
 
 .brand img {
@@ -51,34 +50,5 @@ a:not(#img-brand)::before {
 a:not(#img-brand):hover::before {
   width: 100%;
   left: 0;
-}
-
-/* Welcome image and text */
-.img-wrap img {
-  width: 100%;
-  height: 600px;
-  filter: brightness(50%);
-}
-
-.img-wrap {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-size: 40px;
-}
-
-.welcome-header {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ee4c32;
-}
-
-.centered {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
