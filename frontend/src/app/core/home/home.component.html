@@ -1,9 +1,28 @@
-<div class="img-wrap">
-  <img src="/assets/images/food.jpg" alt="Food"/>
-  <h1 class="welcome-header">Welcome to Ambrosia</h1>
-  <div class="centered">
-    A website for browsing delicious food recipes that are easy to make and sure
-    to please. Get ideas for dishes you've never tried, or revisit favorite
-    recipes from your past - all with a simple, user-friendly interface.
+<main>
+  <div class="img-wrap">
+    <img src="/assets/images/food.jpg" alt="Food" />
+    <h1 class="welcome-header">Welcome to Ambrosia</h1>
+    <div class="centered">
+      A website for browsing delicious food recipes that are easy to make and
+      sure to please. Get ideas for dishes you've never tried, or revisit
+      favorite recipes from your past - all with a simple, user-friendly
+      interface.
+    </div>
   </div>
-</div>
+  <section>
+    <div class="home-recipe-header">
+      <a href="">Our Recipes</a>
+    </div>
+    <div class="card-list">
+      <div *ngFor="let recipe of recipes" class="meal-item" data-id="{{recipe.idMeal}}">
+        <div class="meal-img">
+          <img src="{{recipe.strMealThumb}}" alt="food" />
+        </div>
+        <div class="meal-name">
+          <h3>{{recipe.strMeal}}</h3>
+          <a href="#" class="recipe-btn">Get Recipe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
