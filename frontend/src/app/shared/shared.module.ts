@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { AppEmailDirective } from './validators';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AppEmailDirective
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }
