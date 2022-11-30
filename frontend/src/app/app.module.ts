@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RecipeModule } from './recipe/recipe.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    AuthModule,
     RecipeModule,
     BrowserModule,
     AppRoutingModule,
