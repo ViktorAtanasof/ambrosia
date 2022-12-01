@@ -12,9 +12,14 @@
         <li><a routerLink="/about">About</a></li>
         <!-- Recipe of the day -->
         <li><a routerLink="/daily-recipe">Daily Recipe</a></li>
-        <li><a routerLink="/profile">Profile</a></li>
-        <li><a routerLink="/login">Log in</a></li>
-        <li><a routerLink="/register">Sign up</a></li>
+        <ng-container *ngIf="!isLoggedIn">
+          <li><a routerLink="/login">Log in</a></li>
+          <li><a routerLink="/register">Sign up</a></li>
+        </ng-container>
+        <ng-container *ngIf="isLoggedIn">
+          <li><a routerLink="/profile">Profile</a></li>
+          <li><a routerLink="/logout">Logout</a></li>
+        </ng-container>
       </ul>
     </nav>
   </div>
