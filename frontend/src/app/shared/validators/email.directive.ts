@@ -2,6 +2,7 @@ import { Directive, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn } from '@angular/forms';
 import { appEmailValidator } from './email-validator';
 
+// TODO Review
 @Directive({
   selector: '[email]',
   providers: [
