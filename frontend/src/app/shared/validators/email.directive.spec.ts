@@ -1,8 +1,8 @@
-import { EmailDirective } from './email.directive';
+import { AppEmailDirective } from './email.directive';
 
-describe('EmailDirective', () => {
+describe('AppEmailDirective', () => {
   it('should create an instance', () => {
-    const directive = new EmailDirective();
+    const directive = new AppEmailDirective();
     expect(directive).toBeTruthy();
   });
 });
