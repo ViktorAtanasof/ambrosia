@@ -9,13 +9,5 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class HeaderComponent {
 
-  get isLoggedIn() {
-    return this.authService.isLoggedIn;
-  }
-
-  get user() {
-    return this.authService.user;
-  }
-
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, public authService: AuthService) { }
 }
