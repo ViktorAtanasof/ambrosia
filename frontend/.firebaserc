@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ambrosia-d350f": {
+      "hosting": {
+        "app": [
+          "ambrosia-d350f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ambrosia-d350f"
+  }
+}
