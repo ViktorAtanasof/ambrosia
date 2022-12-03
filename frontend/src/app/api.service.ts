@@ -19,4 +19,8 @@ export class ApiService {
   loadAllRecipes() {
     return this.httpClient.get<IMeal>(`${apiURL}/filter.php?i=chicken_breast`);
   }
+
+  loadRecipeDetails(id: string) {
+    return this.httpClient.get<IMeal>(`${apiURL}/lookup.php?i=${id}`);
+  }
 }
