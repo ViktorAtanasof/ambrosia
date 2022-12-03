@@ -4,7 +4,7 @@
     <p>Please fill in this form to create an account.</p>
     <hr />
 
-    <label for="username"><b>Username</b></label>
+   <!--  <label for="username"><b>Username</b></label>
     <input
       type="text"
       placeholder="Enter Username"
@@ -14,7 +14,7 @@
 
     <p *ngIf="form.get('username')?.touched && form.get('username')?.errors?.['required']">
       Username is required!
-    </p>
+    </p> -->
 
     <label for="email"><b>Email</b></label>
     <input
@@ -45,7 +45,7 @@
           Password is required!
         </p>
         <p *ngIf="form.get('pass')?.get('password')?.errors?.['minlength']">
-          Password must be at least 5 characters!
+          Password must be at least 6 characters!
         </p>
       </ng-container>
       
@@ -68,7 +68,7 @@
     <button [disabled]="form.invalid" class="registerbtn">Register</button>
   </div>
 
-  <div class="container signin">
-    <p>Already have an account? <a href="/login">Sign in</a>.</p>
+  <div class="container login">
+    <p>Already have an account? <a routerLink="/login">Log in</a>.</p>
   </div>
 </form>
