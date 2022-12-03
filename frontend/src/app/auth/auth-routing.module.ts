@@ -1,41 +1,48 @@
 import { RouterModule, Routes } from "@angular/router";
-import { AuthActivate } from "../shared/guards/auth.activate";
 import { LoginComponent } from "./login/login.component";
 import { LogoutComponent } from "./logout/logout.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { RegisterComponent } from "./register/register.component";
+import { 
+    AngularFireAuthGuard,
+    redirectLoggedInTo,
+    redirectUnauthorizedTo 
+} from '@angular/fire/compat/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectAuthorizedTo = () => redirectLoggedInTo(['/']);
 
 const routes: Routes = [
     {
         path: 'register',
-        canActivate: [AuthActivate],
+        canActivate: [AngularFireAuthGuard],
         component: RegisterComponent,
         data: {
-            loginRequired: false
+            authGuardPipe: redirectAuthorizedTo
         }
     },
     {
         path: 'login',
-        canActivate: [AuthActivate],
+        canActivate: [AngularFireAuthGuard],
         component: LoginComponent,
         data: {
-            loginRequired: false
+            authGuardPipe: redirectAuthorizedTo
         }
     },
     {
         path: 'logout',
-        canActivate: [AuthActivate],
+        canActivate: [AngularFireAuthGuard],
         component: LogoutComponent,
         data: {
-            loginRequired: true
+            authGuardPipe: redirectUnauthorizedToLogin
         }
     },
     {
         path: 'profile',
-        canActivate: [AuthActivate],
+        canActivate: [AngularFireAuthGuard],
         component: ProfileComponent,
         data: {
-            loginRequired: true
+            authGuardPipe: redirectUnauthorizedToLogin
         }
     }
 ];
