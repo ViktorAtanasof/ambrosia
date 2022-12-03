@@ -1,19 +1,48 @@
 import { Injectable } from '@angular/core';
 import { IUser } from '../shared/interfaces';
+import { Router } from '@angular/router';
+import { Auth, authState, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,  } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  user: IUser | null = {
-    username: 'Peter',
-    email: 'peter@gmail.com'
-  } as any;
+  currentUser$ = authState(this.fireAuth);
 
-  get isLoggedIn() {
-    return this.user !== null;
+  constructor(private fireAuth: Auth, private router: Router) { }
+
+
+  register(email: string, password: string) {
+    createUserWithEmailAndPassword(this.fireAuth, email, password)
+      .then((response: any) => {
+        console.log(response);
+        this.router.navigate(['/']);
+      })
+      .catch((err) => {
+        alert(err.message);
+      })
   }
 
-  constructor() { }
+  login(email: string, password: string) {
+    signInWithEmailAndPassword(this.fireAuth ,email, password)
+      .then((response: any) => {
+        console.log(response);
+        this.router.navigate(['/']);
+      })
+      .catch((err) => {
+        alert(err.message);
+      })
+  }
+
+  logout() {
+    signOut(this.fireAuth)
+      .then((response: any) => {
+        console.log(response);
+        this.router.navigate(['/']);
+      })
+      .catch((err) => {
+        alert(err.message);
+      })
+  }
 }
