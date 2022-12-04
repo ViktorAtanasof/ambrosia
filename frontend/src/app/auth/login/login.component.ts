@@ -20,9 +20,6 @@ export class LoginComponent {
   constructor(private router: Router, private authService: AuthService, private fb: FormBuilder) { }
 
   loginHandler(): void {
-    /* this.authService.user = {
-      username: 'Peter'
-    } as any; */
     const value = this.form.value;
     this.authService.login(value.email!, value.password!);
   }
