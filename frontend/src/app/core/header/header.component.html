@@ -9,9 +9,9 @@
       <ul>
         <li><a routerLink="/">Home</a></li>
         <li><a routerLink="/recipes">Recipes</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <!-- Recipe of the day -->
-        <li><a routerLink="/daily-recipe">Daily Recipe</a></li>
+        <!-- <li><a routerLink="/about">About</a></li> -->
+        <!-- Random recipe -->
+        <li><a routerLink="/random-recipe">Random Recipe</a></li>
         <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
           <li><a routerLink="/profile">Profile</a></li>
           <li><a routerLink="/logout">Logout</a></li>
