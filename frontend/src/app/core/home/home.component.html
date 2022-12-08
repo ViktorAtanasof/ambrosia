@@ -9,20 +9,20 @@
       interface.
     </div>
   </div>
-  <section>
-    <div class="home-recipe-header">
-      <a href="">Our Recipes</a>
-    </div>
-    <div class="card-list">
-      <div *ngFor="let recipe of recipes" class="meal-item" data-id="{{recipe.idMeal}}">
-        <div class="meal-img">
-          <img src="{{recipe.strMealThumb}}" alt="food" />
-        </div>
-        <div class="meal-name">
-          <h3>{{recipe.strMeal}}</h3>
-          <a routerLink="/recipes/details/{{recipe.idMeal}}" class="recipe-btn">Get Recipe</a>
-        </div>
-      </div>
+  <section class="home-recipes">
+    <div class="main">
+      <h1>Our Recipes</h1>
+      <ul class="cards">
+        <li *ngFor="let recipe of recipes" class="cards_item" data-id="{{recipe.idMeal}}">
+          <div class="card">
+            <div class="card_image"><img src="{{recipe.strMealThumb}}"></div>
+            <div class="card_content">
+              <h2 class="card_title">{{recipe.strMeal}}</h2>
+              <button routerLink="/recipes/details/{{recipe.idMeal}}" class="btn card_btn">Get Recipe</button>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 </main>
