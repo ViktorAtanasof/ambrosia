@@ -1,0 +1,30 @@
+<section class="random-recipe">
+  <div class="img-wrap">
+    <img src="/assets/images/random-recipe-food.jpg" alt="Food" />
+    <h1 class="random-recipe-header">Challenge yourself by trying to cook completely random recipe!</h1>
+    <div class="centered">
+      In order to generate a new recipe, click 'Generate' button.
+    </div>
+  </div>
+  <button class="centered" id="gBtn" (click)="generateRecipe()">Generate</button>
+  <ul class="cards">
+    <li
+      *ngFor="let recipe of recipes"
+      class="cards_item"
+      data-id="{{ recipe.idMeal }}"
+    >
+      <div class="card">
+        <div class="card_image"><img src="{{ recipe.strMealThumb }}" /></div>
+        <div class="card_content">
+          <h2 class="card_title">{{ recipe.strMeal }}</h2>
+          <button
+            routerLink="/recipes/details/{{ recipe.idMeal }}"
+            class="btn card_btn"
+          >
+            Get Recipe
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
