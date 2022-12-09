@@ -9,7 +9,6 @@ import {
   signOut
 } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { of, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -49,6 +48,10 @@ login(email: string, password: string) {
       this.router.navigate(['/']);
     })
     .catch((err) => {
+      if(err.message === 'Firebase: Error (auth/wrong-password).') {
+        console.log('yey');
+        alert('The password is incorrect.')
+      }
       alert(err.message);
     })
 }
