@@ -25,4 +25,8 @@ export class ApiService {
   loadRecipeDetails(id: string) {
     return this.httpClient.get<IMeal>(`${apiURL}/lookup.php?i=${id}`);
   }
+
+  generateRandomRecipe() {
+    return this.httpClient.get<IMeal>(`${apiURL}/random.php`);
+  }
 }
