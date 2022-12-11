@@ -42,14 +42,11 @@ login(email: string, password: string) {
   signInWithEmailAndPassword(this.fireAuth, email, password)
     .then((res: any) => {
       if (res.user) {
-        console.log(res.user.uid);
-
       }
       this.router.navigate(['/']);
     })
     .catch((err) => {
       if(err.message === 'Firebase: Error (auth/wrong-password).') {
-        console.log('yey');
         alert('The password is incorrect.')
       }
       alert(err.message);
