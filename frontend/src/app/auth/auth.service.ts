@@ -34,7 +34,11 @@ register(email: string, password: string) {
       this.router.navigate(['/']);
     })
     .catch((err) => {
-      alert(err.message);
+      if(err.message === 'Firebase: Error (auth/email-already-in-use).') {
+        alert('That email address is taken. Try another.')
+      } else {
+        alert(err.message);
+      }
     })
 }
 
@@ -47,9 +51,12 @@ login(email: string, password: string) {
     })
     .catch((err) => {
       if(err.message === 'Firebase: Error (auth/wrong-password).') {
-        alert('The entered password is incorrect.')
+        alert('Wrong password.')
+      } else if(err.message === 'Error (auth/user-not-found).') {
+        alert('Enter a valid email.')
+      } else {
+        alert(err.message);
       }
-      alert(err.message);
     })
 }
 
