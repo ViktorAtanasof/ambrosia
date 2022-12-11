@@ -48,5 +48,6 @@
   # Auth
   /register
   /login
+  /profile
   /logout
 ```
