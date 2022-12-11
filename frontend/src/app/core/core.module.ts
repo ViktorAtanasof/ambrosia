@@ -5,23 +5,25 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SharedModule } from "../shared/shared.module";
 
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    PageNotFoundComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    PageNotFoundComponent
-  ]
+    declarations: [
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        PageNotFoundComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        SharedModule
+    ],
+    exports: [
+        HeaderComponent,
+        FooterComponent,
+        PageNotFoundComponent
+    ]
 })
 export class CoreModule { }
