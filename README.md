@@ -7,6 +7,10 @@
 
 [![GPLv3 License](https://img.shields.io/github/license/ViktorAtanasof/ambrosia?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 
+[**Live Demo**](https://ambrosiacooking.netlify.app/)
+
+![Logo](https://raw.githubusercontent.com/ViktorAtanasof/ambrosia/main/frontend/src/assets/images/home-page.png)
+
 ## Dependencies
 
 **Frontend**
