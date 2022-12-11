@@ -1,4 +1,26 @@
-<h6>{{details.idMeal}}</h6>
-<h1>{{details.strMeal}}</h1>
-<img src="{{details.strMealThumb}}" alt="food">
-<p>{{details.strInstructions}}</p>
+<section class="details-recipe">
+    <div class="main">
+      <ul class="cards">
+          <div class="card">
+            <div class="card_image"><img class="img_recipe" src="{{details.strMealThumb}}"></div>
+            <div class="card_content">
+              <h1 class="card_title">{{details.strMeal}}</h1>
+              <ng-container *ngIf="authService.currentUser$ | async as user">
+                <ng-container *ngIf="isSubscribed; else NotSubscribed">  
+                    <em><img class="star_icon" src="/assets/icons/star-filled.svg">Added to favourites!</em>
+                </ng-container>
+                <ng-template #NotSubscribed>
+                    <button (click)="addToFavourites()"><img class="star_icon" src="/assets/icons/star-thin.svg">
+                        <span>Favourite</span>
+                    </button>
+                </ng-template>
+            </ng-container>
+            <h2>Instructions</h2>
+            <p>{{details.strInstructions | shorten: 1150}}</p>
+            </div>
+          </div>
+      </ul>
+    </div>
+  </section>
+
+  
