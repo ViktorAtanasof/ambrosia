@@ -17,7 +17,7 @@
 - [Firebase 11+](https://firebase.google.com/)
 
 
-## Installation
+## Installation & Setup
 
 1.1 Navigate to `frontend/` directory.
 
