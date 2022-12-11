@@ -52,7 +52,7 @@ login(email: string, password: string) {
     .catch((err) => {
       if(err.message === 'Firebase: Error (auth/wrong-password).') {
         alert('Wrong password.')
-      } else if(err.message === 'Error (auth/user-not-found).') {
+      } else if(err.message === 'Firebase: Error (auth/user-not-found).') {
         alert('Enter a valid email.')
       } else {
         alert(err.message);
