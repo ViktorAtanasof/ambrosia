@@ -38,6 +38,7 @@
 main {
   background: url("/assets/images/pattern.png");
   background-color: #8a6349;
+  min-height: 100vh;
 }
 
 body {
@@ -128,4 +129,15 @@ img {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: capitalize;
+}
+
+/* Overlay position */
+.overlay {
+  position: absolute;
+  top: 693px;
+  left: 0;
+  right: 0;
+  bottom: -93px;
+  z-index: 2;
+  backdrop-filter: blur(2px);
 }

@@ -9,6 +9,9 @@
       interface.
     </div>
   </div>
+  <div *ngIf="!recipes" class="overlay">
+    <app-spinner></app-spinner>
+  </div>
   <section class="home-recipes">
     <div class="main">
       <h1>Our Recipes</h1>

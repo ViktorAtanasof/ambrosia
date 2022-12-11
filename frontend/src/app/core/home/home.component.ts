@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
-import { IMeal } from 'src/app/shared/interfaces';
+import { IMeal, IRecipe } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { IMeal } from 'src/app/shared/interfaces';
 })
 export class HomeComponent implements OnInit {
 
-  recipes: any;
+  recipes: IRecipe[] | undefined;
 
   constructor(private apiService: ApiService) { }
 
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     this.apiService.loadFirstThreeRecipes().subscribe({
       next: (value) => {
         if (value.meals.length > 3) {
-            this.recipes = value.meals.splice(0, 3);
+            this.recipes = value.meals.splice(0, 3);            
         }
       },
       error: (err) => {
