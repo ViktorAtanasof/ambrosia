@@ -47,7 +47,7 @@ login(email: string, password: string) {
     })
     .catch((err) => {
       if(err.message === 'Firebase: Error (auth/wrong-password).') {
-        alert('The password is incorrect.')
+        alert('The entered password is incorrect.')
       }
       alert(err.message);
     })
@@ -56,7 +56,7 @@ login(email: string, password: string) {
 logout() {
   signOut(this.fireAuth)
     .then((response: any) => {
-      console.log(response);
+     /*  console.log(response); */
       this.router.navigate(['/']);
     })
     .catch((err) => {
