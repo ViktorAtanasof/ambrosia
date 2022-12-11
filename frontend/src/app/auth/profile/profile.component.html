@@ -1,1 +1,41 @@
-<p>profile works!</p>
+<div *ngIf="!userFavourites" class="overlay">
+  <app-spinner></app-spinner>
+</div>
+<section class="profile-recipes">
+  <div class="main">
+    <h1>Favourited Recipes</h1>
+    <ng-container *ngIf="userFavourites?.length > 0; else Nothing">
+      <ul class="cards">
+        <li
+          *ngFor="let favourite of userFavourites"
+          class="cards_item"
+          data-id="{{ favourite.idMeal }}"
+        >
+          <div class="card">
+            <button
+              class="deleteBtn"
+              (click)="removeFromFavourites(favourite.idMeal)"
+            >
+              Delete
+            </button>
+            <div class="card_image">
+              <img src="{{ favourite.strMealThumb }}" />
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">{{ favourite.strMeal }}</h2>
+              <button
+                routerLink="/recipes/details/{{ favourite.idMeal }}"
+                class="btn card_btn"
+              >
+                Get Recipe
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </ng-container>
+    <ng-template #Nothing>
+      <p class="nothing">No favourited recipes.</p>
+    </ng-template>
+  </div>
+</section>
