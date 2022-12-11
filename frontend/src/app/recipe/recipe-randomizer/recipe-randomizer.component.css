@@ -143,3 +143,13 @@ img {
   letter-spacing: 1px;
   text-transform: capitalize;
 }
+/* Overlay position */
+.overlay {
+  position: absolute;
+  top: 693px;
+  left: 0;
+  right: 0;
+  bottom: -93px;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}

@@ -7,6 +7,9 @@
     </div>
   </div>
   <button class="centered" id="gBtn" (click)="generateRecipe()">Generate</button>
+  <div *ngIf="!recipes" class="overlay">
+    <app-spinner></app-spinner>
+  </div>
   <ul class="cards">
     <li
       *ngFor="let recipe of recipes"
