@@ -1,4 +1,3 @@
-
 # Ambrosia
 
 ![Logo](https://raw.githubusercontent.com/ViktorAtanasof/ambrosia/main/frontend/src/assets/images/ambrosiabrand.png)
@@ -6,6 +5,10 @@
 *Ambrosia is an easy-to-use website that features a library of delicious recipes you can save to your recipe box.*
 
 [![GPLv3 License](https://img.shields.io/github/license/ViktorAtanasof/ambrosia?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
+
+[**Live Demo**](https://ambrosiacooking.netlify.app/)
+
+![Logo](https://raw.githubusercontent.com/ViktorAtanasof/ambrosia/main/frontend/src/assets/images/home-page.png)
 
 ## Dependencies
 
@@ -44,5 +47,6 @@
   # Auth
   /register
   /login
+  /profile
   /logout
 ```
