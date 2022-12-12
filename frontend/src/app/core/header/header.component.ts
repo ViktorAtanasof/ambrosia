@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
@@ -9,5 +8,5 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router, public authService: AuthService) { }
+  constructor(public authService: AuthService) { }
 }

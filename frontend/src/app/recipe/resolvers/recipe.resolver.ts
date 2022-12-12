@@ -17,8 +17,6 @@ export class RecipeResolver implements Resolve<IMeal | null> {
             this.router.navigate(['/']);
             return null;
         }
-         return this.apiService.loadRecipeDetails(recipeId);
+        return this.apiService.loadRecipeDetails(recipeId);
     }
-
-
 }

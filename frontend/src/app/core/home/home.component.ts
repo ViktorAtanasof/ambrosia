@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
-import { IMeal, IRecipe } from 'src/app/shared/interfaces';
+import { IRecipe } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-home',

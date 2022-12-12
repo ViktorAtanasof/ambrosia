@@ -1,6 +1,5 @@
 import { FormGroup, ValidatorFn } from "@angular/forms";
 
-// TODO Refactor
 export function sameValueGroupValidator(controlName1: string, controlName2: string): ValidatorFn {
     return (control) => {
         const group = control as FormGroup;

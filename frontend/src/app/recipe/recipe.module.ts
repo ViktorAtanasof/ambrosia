@@ -18,9 +18,6 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     RecipeRoutingModule,
     SharedModule
-  ],
-  exports: [
-    /* RecipeItemsComponent */
   ]
 })
 export class RecipeModule { }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -9,8 +8,7 @@ import { AuthService } from '../auth.service';
 })
 export class LogoutComponent {
 
-  constructor(private router: Router, private authService: AuthService) {
-    /* this.authService.user = null; */
+  constructor(private authService: AuthService) {
     this.authService.logout();
    }
 }

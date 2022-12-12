@@ -14,7 +14,6 @@ const firestore = firebase.firestore;
 export class ProfileComponent implements OnInit, OnDestroy {
 
   userFavourites: any;
-  populateFavourites: any;
   userRef: any;
   sub: any;
 
@@ -36,7 +35,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    //Getting user favourited recipes
+    // Getting user favourited recipes
     this.userRef = this.afstore.doc(`users/${this.authService.getUID()}`);
     this.userRef.get().forEach((doc: any) => {
       this.userFavourites = doc.data().favourites;
