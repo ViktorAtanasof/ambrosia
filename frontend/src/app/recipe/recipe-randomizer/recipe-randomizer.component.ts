@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
+import { IRecipe } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-recipe-randomizer',
@@ -8,7 +9,7 @@ import { ApiService } from 'src/app/api.service';
 })
 export class RecipeRandomizerComponent implements OnInit {
 
-  recipes: any;
+  recipes: IRecipe[] | undefined;;
 
   constructor(private apiService: ApiService) { }
 

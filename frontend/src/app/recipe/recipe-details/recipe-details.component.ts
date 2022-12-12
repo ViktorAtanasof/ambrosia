@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import firebase from 'firebase/compat/app';
-import { ApiService } from 'src/app/api.service';
 import { AuthService } from 'src/app/auth/auth.service';
 
 const firestore = firebase.firestore;
@@ -14,16 +13,15 @@ const firestore = firebase.firestore;
 })
 export class RecipeDetailsComponent implements OnInit {
 
-  details: any
-  recipeId: any;
+  details: any;
+  recipeId: string | undefined;
   isSubscribed: boolean | undefined;
-  recipeInfo : any;
+  recipeInfo: Object | undefined;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private afstore: AngularFirestore,
-    public authService: AuthService,
-    private router: Router
+    public authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -41,13 +39,13 @@ export class RecipeDetailsComponent implements OnInit {
   }
 
   checkForSubscription() {
-    this.afstore.collection('users').get().subscribe((snapshot) => {      
+    this.afstore.collection('users').get().subscribe((snapshot) => {
       snapshot.docs.forEach((doc: any) => {
-        if(doc.data().favourites !== undefined) {
-          if (doc.id === this.authService.getUID() 
-          && doc.data().favourites.some((e: { idMeal: any; }) => e.idMeal === this.recipeId)) {
+        if (doc.data().favourites !== undefined) {
+          if (doc.id === this.authService.getUID()
+            && doc.data().favourites.some((e: { idMeal: any; }) => e.idMeal === this.recipeId)) {
             this.isSubscribed = true;
-          }  
+          }
         }
       })
     })
