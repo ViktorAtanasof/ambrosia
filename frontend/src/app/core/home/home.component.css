@@ -141,3 +141,19 @@ img {
   z-index: 2;
   backdrop-filter: blur(2px);
 }
+
+/* Our Recipes link */
+
+.our-recipes {
+  color: #ee4c32;
+  text-decoration: none;
+}
+
+.our-recipes:hover {
+  text-decoration: underline;
+}
+
+.our-recipes img {
+  width: 45px;
+  color: #ee4c32;
+}
