@@ -44,15 +44,26 @@ button {
   margin: 32px auto;
 }
 
+.register-btn:disabled {
+  opacity: 0.3;
+}
+
+.register-btn:disabled:hover {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 .register-btn {
   padding: 15px 30px;
   background-color: #8a6349;
+  border: none;
   color: #fde6ba;
   text-decoration: none;
 }
 
 .register-btn:hover {
   background-color: #554439;
+  cursor: pointer;
 }
 
 /* Register errors */

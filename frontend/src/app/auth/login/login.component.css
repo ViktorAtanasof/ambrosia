@@ -44,15 +44,26 @@ button {
   margin: 32px auto;
 }
 
+.login-btn:disabled {
+  opacity: 0.3;
+}
+
+.login-btn:disabled:hover {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 .login-btn {
   padding: 15px 30px;
   background-color: #8a6349;
+  border: none;
   color: #fde6ba;
   text-decoration: none;
 }
 
 .login-btn:hover {
   background-color: #554439;
+  cursor: pointer;
 }
 
 /* Login errors */
