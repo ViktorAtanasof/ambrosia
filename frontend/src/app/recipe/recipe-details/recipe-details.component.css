@@ -113,25 +113,30 @@ p {
 
 button {
   color: #ffd42a;
-  background-color: #72533f;
+  /* background-color: #72533f; */
+  background: #72533f url(/assets/icons/star-thin.svg);
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
   border: none;
   padding: 15px;
 }
 
 em {
   color: #ffd42a;
-  background-color: #72533f;
+  background: #72533f url(/assets/icons/star-filled.svg);
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
   border: none;
-  padding: 15px;
+  padding: 15px 15px 15px 35px;
 }
 
 span {
   font-size: 15px;
-  padding: 10px;
+  padding: 10px 10px 10px 25px;
 }
-.star_icon {
+/* .star_icon {
   width: 20px;
-}
+} */
 
 /* dsd */
 

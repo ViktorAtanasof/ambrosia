@@ -7,11 +7,11 @@
               <h1 class="card_title">{{details.strMeal}}</h1>
               <ng-container *ngIf="authService.currentUser$ | async as user">
                 <ng-container *ngIf="isSubscribed; else NotSubscribed">  
-                    <em><img class="star_icon" src="/assets/icons/star-filled.svg">Added to favourites!</em>
+                    <em><!-- <img class="star_icon" src="/assets/icons/star-filled.svg"> -->Added to favourites!</em>
                 </ng-container>
                 <ng-template #NotSubscribed>
-                    <button (click)="addToFavourites()"><img class="star_icon" src="/assets/icons/star-thin.svg">
-                        <span>Favourite</span>
+                    <button (click)="addToFavourites()">
+                      <span>Favourite</span>
                     </button>
                 </ng-template>
             </ng-container>
