@@ -12,7 +12,6 @@
       />
     </label>
     <ng-container *ngIf="form.get('email')?.touched">
-      <!-- <div class="error error-txt">Email can't be blank</div> -->
       <div class="error" *ngIf="form.get('email')?.errors?.['required']">
         Email is required!
       </div>
