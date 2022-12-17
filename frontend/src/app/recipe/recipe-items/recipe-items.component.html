@@ -7,7 +7,7 @@
     <ul class="cards">
       <li *ngFor="let recipe of recipes" class="cards_item" data-id="{{recipe.idMeal}}">
         <div class="card">
-          <div class="card_image"><img src="{{recipe.strMealThumb}}"></div>
+          <div class="card_image"><img src="{{recipe.strMealThumb}}" alt="meal"></div>
           <div class="card_content">
             <h2 class="card_title">{{recipe.strMeal}}</h2>
             <button routerLink="/recipes/details/{{recipe.idMeal}}" class="btn card_btn">Get Recipe</button>
