@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { NavigationEnd, Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
+import { Subscription } from 'rxjs';
 import { AuthService } from '../auth.service';
 
 const firestore = firebase.firestore;
@@ -15,7 +16,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   userFavourites: any;
   userRef: any;
-  sub: any;
+  sub: Subscription;
 
   constructor(
     private afstore: AngularFirestore,
