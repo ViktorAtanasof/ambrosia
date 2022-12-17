@@ -16,6 +16,7 @@ export class RecipeItemsComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.loadAllRecipes().subscribe({
       next: (value) => {
+        // Object -> meals[Objects]
         this.recipes = value.meals;
       },
       error: (err) => {

@@ -26,6 +26,8 @@ export class RecipeDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(data => {
+      console.log(data);
+      // Object -> recipe -> meals[Objects]
       this.details = data['recipe']['meals'][0];
       this.recipeId = this.details.idMeal;
     });
