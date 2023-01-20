@@ -9,14 +9,13 @@
   position: relative;
   text-align: center;
   color: white;
-  /* font-size: 40px; */
   font-size: 2.5rem;
   margin-bottom: -10px;
 }
 
 .random-recipe-header {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ee4c32;
@@ -24,24 +23,17 @@
 
 .centered {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.btn-position {
-  position: absolute;
-  top: 90%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #gBtn {
+  position: relative;
   padding: 20px 35px;
   background-color: #644d3f;
-  display: inline-block;
   color: #fde6ba;
-  font-size: 20px;
+  font-size: 1rem;
   text-decoration: none;
 }
 
