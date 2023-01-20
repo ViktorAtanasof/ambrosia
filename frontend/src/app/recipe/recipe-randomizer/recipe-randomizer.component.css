@@ -9,13 +9,14 @@
   position: relative;
   text-align: center;
   color: white;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: 2.5rem;
   margin-bottom: -10px;
 }
 
 .random-recipe-header {
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ee4c32;
@@ -23,16 +24,24 @@
 
 .centered {
   position: absolute;
-  top: 55%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-position {
+  position: absolute;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #gBtn {
-  top: 58%;
-  padding: 15px 30px;
+  padding: 20px 35px;
   background-color: #644d3f;
+  display: inline-block;
   color: #fde6ba;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -67,10 +76,28 @@ body {
 h1 {
   margin-top: 0;
   padding-top: 30px;
-  font-size: 60px;
+  font-size: 5rem;
   font-weight: 600;
   text-align: center;
   color: #fde6ba;
+}
+
+@media (max-width: 1728px) {
+  h1 {
+    font-size: calc(1vw + 3.5rem);
+  }
+  .img-wrap {
+    font-size: calc(0.5vw + 1.5rem);
+  }
+}
+
+@media (max-width: 1544px) {
+  h1 {
+    font-size: calc(1vw + 2.5rem);
+  }
+  .img-wrap {
+    font-size: calc(0.5vw + 1.5rem);
+  }
 }
 
 img {
