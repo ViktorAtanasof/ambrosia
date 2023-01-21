@@ -1,3 +1,5 @@
+@import url("https://use.fontawesome.com/releases/v6.2.0/css/all.css");
+
 /* Grid layout for home recipes */
 *,
 *::before,
@@ -134,9 +136,18 @@ span {
   font-size: 15px;
   padding: 10px 10px 10px 25px;
 }
-/* .star_icon {
-  width: 20px;
-} */
 
-/* dsd */
+/* Recipe video link and icon */
 
+.recipe-video {
+  text-decoration:none;
+  color: #ee4c32;
+}
+
+.recipe-video:hover {
+  text-decoration: underline;
+}
+
+.fa-youtube {
+  margin-right: 5px;
+}

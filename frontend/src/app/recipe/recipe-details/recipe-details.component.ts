@@ -36,7 +36,8 @@ export class RecipeDetailsComponent implements OnInit {
       idMeal: this.details.idMeal,
       strMeal: this.details.strMeal,
       strMealThumb: this.details.strMealThumb,
-      strInstructions: this.details.strInstructions
+      strInstructions: this.details.strInstructions,
+      strYoutube: this.details.strYoutube
     }
   }
 
