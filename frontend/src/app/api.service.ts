@@ -13,11 +13,11 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   loadFirstThreeRecipes() {
-    return this.httpClient.get<IMeal>(`${apiURL}/filter.php?i=chicken_breast`);
+    return this.httpClient.get<IMeal>(`${apiURL}/filter.php?i=`);
   }
 
   loadAllRecipes() {
-    return this.httpClient.get<IMeal>(`${apiURL}/filter.php?i=chicken_breast`);
+    return this.httpClient.get<IMeal>(`${apiURL}/filter.php?i=`);
   }
 
   loadRecipeDetails(id: string) {
@@ -26,5 +26,9 @@ export class ApiService {
 
   generateRandomRecipe() {
     return this.httpClient.get<IMeal>(`${apiURL}/random.php`);
+  }
+
+  searchByMainIngredient(ingredient: string) {
+    return this.httpClient.get<IMeal>(`${apiURL}/filter.php?i=${ingredient}`);
   }
 }
