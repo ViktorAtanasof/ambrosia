@@ -1,3 +1,5 @@
+@import url("https://use.fontawesome.com/releases/v6.2.0/css/all.css");
+
 /* Grid layout for home recipes */
 *,
 *::before,
@@ -62,6 +64,7 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 50px;
 }
 
 .cards_item {
@@ -110,4 +113,93 @@ img {
   bottom: -93px;
   z-index: 2;
   backdrop-filter: blur(2px);
+}
+
+/* Search bar */
+
+body {
+  background: #f2f2f2;
+  font-family: "Open Sans", sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.search input {
+  width: 70%;
+}
+
+/* Search not found result */
+.empty-search {
+  text-align: center;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.empty-search-icon {
+  font-size: 3rem;
+  margin: 10px 0px;
+}
+
+.empty-search-text {
+  color: #ee4c32;
+  font-weight: 800;
+  font-size: 3.75rem;
+  margin: 0px;
+  padding: 0px;
+}
+
+.empty-search-more {
+  color: #fde6ba;
+  font-size: 2rem;
+  margin: 10px 0px;
+}
+
+.solutions {
+  padding: 0px;
+  margin: 15px 0px;
+}
+
+.solutions li {
+  color: #ee4c32;
+  list-style-type: none;
+  font-size: 1.5rem;
 }

@@ -1,19 +1,45 @@
-<div *ngIf="!recipes" class="overlay">
+<!-- TODO
+ -->
+<!-- <div *ngIf="!recipes" class="overlay">
   <app-spinner></app-spinner>
-</div>
+</div> -->
 <section class="home-recipes">
   <div class="main">
     <h1>All Recipes</h1>
-    <ul class="cards">
-      <li *ngFor="let recipe of recipes" class="cards_item" data-id="{{recipe.idMeal}}">
-        <div class="card">
-          <div class="card_image"><img src="{{recipe.strMealThumb}}" alt="meal"></div>
-          <div class="card_content">
-            <h2 class="card_title">{{recipe.strMeal}}</h2>
-            <button routerLink="/recipes/details/{{recipe.idMeal}}" class="btn card_btn">Get Recipe</button>
-          </div>
-        </div>
-      </li>
-    </ul>
+    <div class="wrap">
+      <div class="search">
+        <form [formGroup]="searchForm">
+          <input type="text" formControlName="search" class="search-ingredient" placeholder="Search recipe by main ingredient...">
+        </form>
+        <button type="submit" class="search-btn">
+          <i class="fa fa-search"></i>
+       </button>
+      </div>
+   </div>
+   <ng-container *ngIf="recipes?.length; else notFound">
+     <ul class="cards">
+       <li *ngFor="let recipe of recipes" class="cards_item" data-id="{{recipe.idMeal}}">
+         <div class="card">
+           <div class="card_image"><img src="{{recipe.strMealThumb}}" alt="meal"></div>
+           <div class="card_content">
+             <h2 class="card_title">{{recipe.strMeal}}</h2>
+             <button routerLink="/recipes/details/{{recipe.idMeal}}" class="btn card_btn">Get Recipe</button>
+           </div>
+         </div>
+       </li>
+     </ul>
+   </ng-container>
+   <ng-template #notFound>
+    <div class="empty-search">
+      <p class="empty-search-icon">🕵️‍&zwj;</p>
+      <p class="empty-search-text">Sorry we can't find any recipes with "{{searchValue}}"</p>
+      <p class="empty-search-more">Try these popular search ingredients instead:</p>
+      <ul class="solutions">
+        <li>chicken</li>
+        <li>beef</li>
+        <li>rice</li>
+      </ul>
+    </div>
+   </ng-template>
   </div>
 </section>
