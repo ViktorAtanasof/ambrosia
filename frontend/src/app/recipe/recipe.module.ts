@@ -5,6 +5,7 @@ import { RecipeItemsComponent } from './recipe-items/recipe-items.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 import { RecipeRandomizerComponent } from './recipe-randomizer/recipe-randomizer.component';
 import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     RecipeRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class RecipeModule { }
