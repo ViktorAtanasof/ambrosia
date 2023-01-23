@@ -13,6 +13,7 @@ export class RecipeItemsComponent implements OnInit {
 
   recipes: IRecipe[] | undefined;
   searchValue: string | undefined;
+/*   isSearching: boolean | undefined; */
 
   searchForm: FormGroup = new FormGroup({
     search: new FormControl('')
@@ -48,7 +49,6 @@ export class RecipeItemsComponent implements OnInit {
       error: (err) => {
         console.error(err);
       }
-    })
-
+    });
   }
 }
