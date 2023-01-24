@@ -61,6 +61,8 @@ h1 {
   color: #fde6ba;
 }
 
+/* Media queries */
+
 @media (max-width:620px) {
   h1 {
     font-size: calc(1vw + 1.5rem);
