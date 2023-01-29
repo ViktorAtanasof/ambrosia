@@ -9,14 +9,14 @@ import { IRecipe } from 'src/app/shared/interfaces';
 })
 export class RecipeRandomizerComponent implements OnInit {
 
-  recipes: IRecipe[] | undefined;;
+  recipe: IRecipe | undefined;
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.apiService.generateRandomRecipe().subscribe({
       next: (value) => {
-        this.recipes = value.meals;
+        this.recipe = value.meals[0];
       },
       error: (err) => {
         console.error(err);

@@ -165,10 +165,10 @@ img {
 /* Overlay position */
 .overlay {
   position: absolute;
-  top: 693px;
+  top: 45rem;
   left: 0;
   right: 0;
-  bottom: -93px;
+  bottom: -16rem;
   z-index: 2;
   backdrop-filter: blur(2px);
 }
