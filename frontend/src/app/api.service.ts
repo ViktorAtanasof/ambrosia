@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { IMeal } from './shared/interfaces';
 
-const apiURL = environment.apiUrl;
+const apiURL: string = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ const apiURL = environment.apiUrl;
 export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
-
+  // TODO
   loadFirstThreeRecipes() {
     return this.httpClient.get<IMeal>(`${apiURL}/filter.php?i=`);
   }
