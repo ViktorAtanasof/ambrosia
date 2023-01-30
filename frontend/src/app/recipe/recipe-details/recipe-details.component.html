@@ -1,27 +1,32 @@
 <section class="details-recipe">
-    <div class="main">
-      <ul class="cards">
-          <div class="card">
-            <div class="card_image"><img class="img_recipe" src="{{details.strMealThumb}}" alt="meal"></div>
-            <div class="card_content">
-              <h1 class="card_title">{{details.strMeal}}</h1>
-              <ng-container *ngIf="authService.currentUser$ | async as user">
-                <ng-container *ngIf="isSubscribed; else NotSubscribed">  
-                    <em>Added to favourites!</em>
-                </ng-container>
-                <ng-template #NotSubscribed>
-                    <button (click)="addToFavourites()">
-                      <span>Favourite</span>
-                    </button>
-                </ng-template>
+  <div class="main">
+    <div class="card_wrap">
+      <div class="card">
+        <div class="card_image">
+          <img class="img_recipe" src="{{ details.strMealThumb }}" alt="meal" />
+        </div>
+        <div class="card_content">
+          <h1 class="card_title">{{ details.strMeal }}</h1>
+          <ng-container *ngIf="authService.currentUser$ | async as user">
+            <ng-container *ngIf="isSubscribed; else NotSubscribed">
+              <em>Added to favourites!</em>
             </ng-container>
-            <h2>Instructions</h2>
-            <p>{{details.strInstructions | shorten: 850}}</p>
-            <a class="recipe-video" href="{{details.strYoutube}}" target="_blank"><i class="fa-brands fa-youtube"></i>Full Recipe Video</a>
-            </div>
-          </div>
-      </ul>
+            <ng-template #NotSubscribed>
+              <button (click)="addToFavourites()">
+                <span>Favourite</span>
+              </button>
+            </ng-template>
+          </ng-container>
+          <h2>Instructions</h2>
+          <p>{{ details.strInstructions | shorten : 850 }}</p>
+          <a
+            class="recipe-video"
+            href="{{ details.strYoutube }}"
+            target="_blank"
+            ><i class="fa-brands fa-youtube"></i>Full Recipe Video</a
+          >
+        </div>
+      </div>
     </div>
-  </section>
-
-  
+  </div>
+</section>

@@ -1,6 +1,6 @@
 @import url("https://use.fontawesome.com/releases/v6.2.0/css/all.css");
 
-/* Grid layout for home recipes */
+/* Grid layout for recipe details */
 *,
 *::before,
 *::after {
@@ -11,13 +11,6 @@
   background: url("/assets/images/pattern.png");
   background-color: #8a6349;
   min-height: 100vh;
-}
-
-body {
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
 }
 
 .main {
@@ -46,47 +39,12 @@ p {
   vertical-align: middle;
 }
 
-.btn {
-  color: #ee4c32;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid #72533f;
-  background: transparent;
-}
-
-.btn:hover {
-  background-color: rgba(121, 75, 33, 0.12);
-}
-
-.cards {
+.card_wrap {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.cards_item {
-  display: flex;
-  padding: 1rem;
-}
-
-@media (min-width: 40rem) {
-  .cards_item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 56rem) {
-  .cards_item {
-    width: 33.3333%;
-  }
 }
 
 .card {
@@ -113,9 +71,10 @@ p {
   margin-top: 5px;
 }
 
+/* Add to favourites button */
+
 button {
   color: #ffd42a;
-  /* background-color: #72533f; */
   background: #72533f url(/assets/icons/star-thin.svg);
   background-repeat: no-repeat;
   background-position: 8px 8px;

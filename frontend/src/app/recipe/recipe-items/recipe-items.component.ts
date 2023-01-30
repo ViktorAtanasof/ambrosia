@@ -27,8 +27,9 @@ export class RecipeItemsComponent implements OnInit {
       )
       .subscribe({
         next: (value) => {
-          // Object -> meals[Objects]
-          this.recipes = value.meals;
+          if (value.meals.length > 12) {
+            this.recipes = value.meals.splice(0, 12);
+          }
           this.searchValue = this.searchForm.get('search')?.value;
         },
         error: (err) => {
