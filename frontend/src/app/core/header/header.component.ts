@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
@@ -8,13 +8,13 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class HeaderComponent {
 
-  burgerMenu = document.querySelector('.hamburger');
-  navMenu = document.querySelector('ul');
+  hamClick: boolean | undefined;
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, private renderer: Renderer2) { }
 
   onClickHamburgerMenu(): void {
-    this.burgerMenu?.classList.toggle('active');
-    this.navMenu?.classList.toggle('active');
+    this.hamClick = !this.hamClick;
+    /* this.burgerMenu?.classList.toggle('active');
+    this.navMenu?.classList.toggle('active'); */
   }
 }

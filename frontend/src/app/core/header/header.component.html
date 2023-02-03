@@ -6,20 +6,20 @@
       /></a>
     </div>
     <nav class="nav-links">
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/recipes">Recipes</a></li>
-        <li><a routerLink="/random-recipe">Random Recipe</a></li>
+      <ul [ngClass]="{'active': hamClick}">
+        <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a routerLink="/recipes" routerLinkActive="active-link">Recipes</a></li>
+        <li><a routerLink="/random-recipe" routerLinkActive="active-link">Random Recipe</a></li>
         <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
-          <li><a routerLink="/profile">Profile</a></li>
-          <li><a routerLink="/logout">Logout</a></li>
+          <li><a routerLink="/profile" routerLinkActive="active-link">Profile</a></li>
+          <li><a routerLink="/logout" routerLinkActive="active-link">Logout</a></li>
         </ng-container>
         <ng-template #loginButton>
-          <li><a routerLink="/login">Log in</a></li>
-          <li><a routerLink="/register">Sign up</a></li>
+          <li><a routerLink="/login" routerLinkActive="active-link">Log in</a></li>
+          <li><a routerLink="/register" routerLinkActive="active-link">Sign up</a></li>
         </ng-template>
       </ul>
-      <div class="hamburger" (click)="onClickHamburgerMenu()">
+      <div class="hamburger" [ngClass]="{'active': hamClick}" (click)="onClickHamburgerMenu()">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
