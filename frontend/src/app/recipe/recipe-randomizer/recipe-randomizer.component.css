@@ -38,6 +38,7 @@
 }
 
 #gBtn:hover {
+  cursor: pointer;
   background-color: #554439;
 }
 /* Grid layout for home recipes */
