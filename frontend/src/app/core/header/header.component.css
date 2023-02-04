@@ -45,7 +45,7 @@
 
 .active-link {
   font-weight: 600;
-  border-bottom: 3px solid #ee4c32;
+  border-bottom: 2px solid #ee4c32;
 }
 
 /* Navigation links animation */
@@ -78,6 +78,15 @@ a:not(#img-brand):hover::before {
     padding: 16px 16px 16px 10px;
   }
 
+  .active-link {
+    font-weight: 600;
+    border-bottom: 2px solid #ee4c32;
+  }
+
+  a:not(#img-brand)::before {
+    height: 0px;
+  }
+
   .hamburger {
     display: block;
   }
@@ -95,16 +104,16 @@ a:not(#img-brand):hover::before {
   }
   
   .navbar ul {
-    position: fixed;
-    right: -160px;
+    position: absolute;
     top: 70px;
-    gap: 0;
+    right: 100%;
     flex-direction: column;
     background-color: #fde6ba;
-    z-index: 1;
+    border-bottom: 1px solid #8a6349;
   }
-
+  
   .navbar ul.active {
+    z-index: 1;
     right: 0;
     width: 100%;
   }
