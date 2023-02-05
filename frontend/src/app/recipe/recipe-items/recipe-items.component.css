@@ -117,7 +117,6 @@ img {
 
 .search {
   width: 100%;
-  position: relative;
   display: flex;
 }
 
@@ -150,10 +149,10 @@ img {
 }
 
 .wrap {
-  width: 30%;
+  width: 100%;
   position: relative;
   top: 25%;
-  left: 46%;
+  left: 79%;
   transform: translate(-50%, -50%);
 }
 
@@ -195,4 +194,17 @@ img {
   text-shadow: 2px 2px 4px black;
   list-style-type: none;
   font-size: 1.5rem;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .search-ingredient {
+    width: 200px;
+  }
+
+  .wrap {
+    width: 50%;
+    left: 35%;
+  }
 }
