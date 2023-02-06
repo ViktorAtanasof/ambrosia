@@ -26,7 +26,7 @@ h1 {
 
 .registration label {
   display: block;
-  margin: 14px 0;
+  margin: 14px auto;
   width: 320px;
 }
 
@@ -88,3 +88,21 @@ input.ng-touched.ng-invalid {
 .container-login a:hover {
   text-decoration: underline;
 }
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  .registration {
+   margin: 0 12px;
+   padding: 0px 46px;
+  }
+ 
+  .registration label {
+   width: 180px;
+  }
+
+ }
