@@ -26,7 +26,7 @@ h1 {
 
 .log-in label {
   display: block;
-  margin: 14px 0;
+  margin: 14px auto;
   width: 320px;
 }
 
@@ -87,4 +87,21 @@ input.ng-touched.ng-invalid {
 
 .container-signup a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+ .log-in {
+  margin: 0 12px;
+  padding: 0px 46px;
+ }
+
+ .log-in label {
+  width: 180px;
+ }
 }
