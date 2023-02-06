@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
     // Getting user favourited recipes
     this.userRef = this.afstore.doc(`users/${this.authService.getUID()}`);
     this.userRef.get().forEach((doc: any) => {
-      this.userFavourites = doc.data().favourites;
+      this.userFavourites = doc.data()?.favourites;
       if(this.userFavourites === undefined) {
         this.userFavourites = [];
       }
