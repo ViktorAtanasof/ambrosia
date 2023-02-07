@@ -9,7 +9,7 @@
   position: relative;
   text-align: center;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: -10px;
 }
 
@@ -69,28 +69,10 @@ body {
 h1 {
   margin-top: 0;
   padding-top: 30px;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 600;
   text-align: center;
   color: #fde6ba;
-}
-
-@media (max-width: 1728px) {
-  h1 {
-    font-size: calc(1vw + 3.5rem);
-  }
-  .img-wrap {
-    font-size: calc(0.5vw + 1.5rem);
-  }
-}
-
-@media (max-width: 1544px) {
-  h1 {
-    font-size: calc(1vw + 2.5rem);
-  }
-  .img-wrap {
-    font-size: calc(0.5vw + 1.5rem);
-  }
 }
 
 img {
@@ -172,4 +154,15 @@ img {
   bottom: -16rem;
   z-index: 2;
   backdrop-filter: blur(2px);
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc(1vw + 2rem);
+  }
+  .img-wrap {
+    font-size: calc(0.5vw + 1.5rem);
+  }
 }
