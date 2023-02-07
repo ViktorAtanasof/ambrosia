@@ -104,4 +104,9 @@ input.ng-touched.ng-invalid {
  .log-in label {
   width: 180px;
  }
+
+ .error {
+  margin: 0 auto;
+  width: 180px;
+ }
 }

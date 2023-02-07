@@ -105,4 +105,8 @@ input.ng-touched.ng-invalid {
    width: 180px;
   }
 
+  .error {
+    margin: 0 auto;
+    width: 180px;
+   }
  }
