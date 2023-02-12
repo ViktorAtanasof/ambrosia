@@ -13,10 +13,16 @@ export class RecipeResolver implements Resolve<IMeal | null> {
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): IMeal | null | Observable<IMeal> | Promise<IMeal> {
         const recipeId = route.params['id'];
-        if (!recipeId) {
+       /*  if (!recipeId) {
             this.router.navigate(['/']);
             return null;
-        }
+        } */
+        this.apiService.loadRecipeDetails(recipeId).subscribe((v) => {
+            if (v.meals === null) {
+                this.router.navigate(['/not-found']);
+            }
+        });
+
         return this.apiService.loadRecipeDetails(recipeId);
     }
 }
