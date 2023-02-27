@@ -49,4 +49,8 @@
   /login
   /profile
   /logout
+  
+  # Others (Home, Not Found)
+  /
+  /anything
 ```
